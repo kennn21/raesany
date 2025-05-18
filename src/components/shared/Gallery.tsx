@@ -2,7 +2,7 @@
 
 import { ListBlobResultBlob } from '@vercel/blob';
 import Image from 'next/image';
-import { FC, useCallback, useState } from 'react';
+import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import ImageViewer from 'react-simple-image-viewer';
 
 type GalleryProps = {
@@ -12,6 +12,8 @@ type GalleryProps = {
 export const Gallery: FC<GalleryProps> = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const animationFrameRef = useRef<number | null>(null);
 
   const openImageViewer = useCallback((index: number) => {
     setCurrentImage(index);
@@ -22,9 +24,39 @@ export const Gallery: FC<GalleryProps> = ({ images }) => {
     setIsViewerOpen(false);
   };
 
+  // Auto-scroll slowly to the right
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    const scrollSpeed = 0.3; // pixels per frame
+    const scroll = () => {
+      if (
+        scrollContainer.scrollLeft + scrollContainer.clientWidth >=
+        scrollContainer.scrollWidth
+      ) {
+        scrollContainer.scrollLeft = 0; // Reset to start
+      } else {
+        scrollContainer.scrollLeft += scrollSpeed;
+      }
+      animationFrameRef.current = requestAnimationFrame(scroll);
+    };
+
+    animationFrameRef.current = requestAnimationFrame(scroll);
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [images]);
+
   return (
-    <section className=" py-8 w-[100dvw] overflow-x-auto">
-      <div className="flex flex-nowrap gap-4 w-fit  ">
+    <section className="py-8 w-[100dvw] overflow-x-auto">
+      <div
+        className="flex flex-nowrap gap-4 w-fit"
+        ref={scrollContainerRef} // << this is where the scroll actually happens
+      >
         {images.map((img, index) => (
           <div
             key={img.pathname}
