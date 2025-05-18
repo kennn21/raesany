@@ -8,7 +8,7 @@ export const ContactSection = () => {
           <strong>TOUCH</strong> <span className="font-light">BASE</span>
         </h2>
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col justify-center">
+          <div className="w-full md:w-full items-center mb-8 md:mb-0 flex flex-col justify-center">
             <p className="text-2xl italic mb-8 text-center md:text-left">
               I&apos;D LOVE TO HEAR FROM YOU
             </p>
@@ -49,7 +49,7 @@ export const ContactSection = () => {
               </a> */}
             </div>
           </div>
-          <div className="w-full md:w-1/2">
+          {/* <div className="w-full md:w-1/2">
             <form className="space-y-4">
               <input
                 type="text"
@@ -76,7 +76,7 @@ export const ContactSection = () => {
                 Send
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

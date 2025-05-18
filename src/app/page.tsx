@@ -2,7 +2,6 @@ import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
-import { InstagramSection } from '@/components/InstagramSection';
 import { PortfolioSection } from '@/components/PortfolioSection';
 import { StorySection } from '@/components/StorySection';
 
@@ -21,7 +20,7 @@ export default function Home() {
 
       <StorySection />
 
-      <InstagramSection />
+      {/* <InstagramSection /> */}
 
       <ContactSection />
 

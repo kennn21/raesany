@@ -1,4 +1,10 @@
+'use client';
+
+import { useState } from 'react';
+
 export const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       {/* Header */}
@@ -16,7 +22,7 @@ export const Header = () => {
 
           <div className="w-1/4 flex justify-end">
             <button
-              // onClick={() => setMenuOpen(!menuOpen)}
+              onClick={() => setMenuOpen(!menuOpen)}
               className="focus:outline-none"
             >
               <div className="w-8 h-6 flex flex-col justify-between">
@@ -29,56 +35,56 @@ export const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        {false && (
-          <div className="fixed inset-0 bg-white z-40 pt-24">
+        {menuOpen && (
+          <div className="fixed inset-0 bg-white z-40 pt-24 text-gray-950">
             <div className="container mx-auto px-4">
               <nav className="flex flex-col items-center text-2xl space-y-6">
                 <a
                   href="#home"
-                  className="hover:text-gray-600"
-                  // onClick={() => setMenuOpen(false)}
+                  className="hover:text-pink-300"
+                  onClick={() => setMenuOpen(false)}
                 >
                   Home
                 </a>
                 <a
                   href="#portfolio"
-                  className="hover:text-gray-600"
-                  // onClick={() => setMenuOpen(false)}
+                  className="hover:text-pink-300"
+                  onClick={() => setMenuOpen(false)}
                 >
                   Portfolio
                 </a>
-                <a
+                {/* <a
                   href="#videos"
-                  className="hover:text-gray-600"
-                  // onClick={() => setMenuOpen(false)}
+                  className="hover:text-pink-300"
+                  onClick={() => setMenuOpen(false)}
                 >
                   Videos
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   href="#collaborations"
-                  className="hover:text-gray-600"
-                  // onClick={() => setMenuOpen(false)}
+                  className="hover:text-pink-300"
+                  onClick={() => setMenuOpen(false)}
                 >
                   Collaborations
-                </a>
+                </a> */}
                 <a
                   href="#story"
-                  className="hover:text-gray-600"
-                  // onClick={() => setMenuOpen(false)}
+                  className="hover:text-pink-300"
+                  onClick={() => setMenuOpen(false)}
                 >
                   My Story
                 </a>
-                <a
+                {/* <a
                   href="#instagram"
-                  className="hover:text-gray-600"
-                  // onClick={() => setMenuOpen(false)}
+                  className="hover:text-pink-300"
+                  onClick={() => setMenuOpen(false)}
                 >
                   Instagram
-                </a>
+                </a> */}
                 <a
                   href="#contact"
-                  className="hover:text-gray-600"
-                  // onClick={() => setMenuOpen(false)}
+                  className="hover:text-pink-300"
+                  onClick={() => setMenuOpen(false)}
                 >
                   Contact
                 </a>
