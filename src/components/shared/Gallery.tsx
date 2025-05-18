@@ -23,12 +23,12 @@ export const Gallery: FC<GalleryProps> = ({ images }) => {
   };
 
   return (
-    <section className="container mx-auto py-8 max-w-screen overflow-x-auto">
+    <section className=" py-8 w-[100dvw] overflow-x-auto">
       <div className="flex flex-nowrap gap-4 w-fit  ">
         {images.map((img, index) => (
           <div
             key={img.pathname}
-            className="w-[200px] h-[200px] object-cover hover:scale-105 transition-transform duration-300 relative aspect-square cursor-pointer overflow-hidden shadow-md"
+            className="w-[400px] h-[400px] object-cover hover:scale-105 transition-transform duration-300 relative aspect-square cursor-pointer overflow-hidden shadow-md"
             onClick={() => openImageViewer(index)}
           >
             <Image

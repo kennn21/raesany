@@ -8,7 +8,7 @@ export const PortfolioSection = () => {
 
   return (
     <section id="portfolio" className="py-16 bg-gray-50 text-black w-full">
-      <div className="container mx-auto px-4">
+      <div className="w-full">
         <h2 className="text-5xl mb-16 text-center">
           PORT<span className="font-light">FOLIO</span>
         </h2>
