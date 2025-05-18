@@ -1,3 +1,4 @@
+import { PortfolioSection } from '@/components/PortfolioSection';
 import Image from 'next/image';
 
 export default function Home() {
@@ -150,29 +151,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-16 bg-gray-50 text-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl mb-16 text-center">
-            PORT<span className="font-light">FOLIO</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="overflow-hidden">
-                <Image
-                  width={600}
-                  height={800}
-                  src={`https://picsum.photos/600/800`}
-                  alt={`Portfolio item ${item}`}
-                  className="w-full h-96 object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="flex justify-center mt-8">
-            <button className="bg-black text-white px-6 py-2">View More</button>
-          </div>
-        </div>
-      </section>
+      <PortfolioSection />
 
       {/* Videos Section */}
       <section id="videos" className="py-16 bg-black text-white">
