@@ -11,7 +11,7 @@ export const Header = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white">
         <div className="flex justify-between items-center px-4 py-4">
-          <div className="w-1/4">
+          <div className="w-fit">
             <a href="#" className="block">
               <Image src="/logo.svg" alt="Logo" width={100} height={100} />
             </a>
