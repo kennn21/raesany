@@ -1,8 +1,10 @@
+import { LINK_SOCIAL_INSTAGRAM } from '@/constants/links';
+
 export const HeroSocialMedia = () => {
   return (
     <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-6">
       <a
-        href="https://instagram.com/raesany"
+        href={LINK_SOCIAL_INSTAGRAM}
         target="_blank"
         rel="noopener noreferrer"
         className="bg-gray-950 p-2 rounded-full"
