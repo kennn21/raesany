@@ -13,11 +13,10 @@ export const StorySection = () => {
               </span>
             </h2>
             <p className="text-gray-700 mb-6">
-              Rae Sany fell head over heels for the fashion world after winning
-              a local pageant, which gave her modeling career the perfect runway
-              takeoff. Now splitting her time between the New York, Philly and
-              Orlando scene, she works her magic as a model, specializing in
-              beauty, fashion editorials, and commercial print gigs.
+              Blending soft elegance with bold expression, Rae is a versatile
+              beauty model who brings life to every look — from fresh-faced
+              natural to high-glam editorial. Her adaptability and strong visual
+              presence make her an ideal face for any campaigns
             </p>
             <p className="text-gray-700">
               But modeling isn&apos;t her only hustle. Rae also creates content

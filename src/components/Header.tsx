@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 
 export const Header = () => {
@@ -12,11 +13,7 @@ export const Header = () => {
         <div className="flex justify-between items-center px-4 py-4">
           <div className="w-1/4">
             <a href="#" className="block">
-              <div className="w-16 h-16 bg-black flex items-center justify-center">
-                <div className="w-12 h-12 border-2 border-white flex items-center justify-center">
-                  <div className="w-8 h-8 border-2 border-white transform rotate-45"></div>
-                </div>
-              </div>
+              <Image src="/logo.svg" alt="Logo" width={100} height={100} />
             </a>
           </div>
 
